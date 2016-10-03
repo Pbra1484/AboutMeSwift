@@ -20,6 +20,25 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func toTechnology(sender: UIButton)
+    {
+        performSegueWithIdentifier("toTechnology", sender: sender)
+    }
 
+    @IBAction func toSchool(sender: UIButton)
+    {
+        performSegueWithIdentifier("toSchool", sender: sender)
+    }
+    
+    @IBAction func toVideoGames(sender: UIButton)
+    {
+        performSegueWithIdentifier("toVideoGames", sender: sender)
+    }
+    @IBAction func toSports(sender: UIButton)
+        
+    {
+        performSegueWithIdentifier("toSports", sender: sender)
+    }
+    
 }
 
