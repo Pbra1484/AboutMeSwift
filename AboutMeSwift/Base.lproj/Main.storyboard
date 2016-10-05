@@ -27,13 +27,22 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="humanAugment copy" translatesAutoresizingMaskIntoConstraints="NO" id="ktE-lR-eRP">
                                 <rect key="frame" x="50" y="400" width="250" height="133"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ID7-nl-X0j">
+                                <rect key="frame" x="50" y="550" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="toMainFromTechnology:" destination="xAi-1v-Kvi" eventType="touchUpInside" id="XPV-OS-Rvg"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toMainFromTechnology" id="HVw-LM-jEO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQ9-at-vbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1933" y="96"/>
+            <point key="canvasLocation" x="1977" y="320"/>
         </scene>
         <!--Sports View Controller-->
         <scene sceneID="Ke0-JN-1Ry">
@@ -57,6 +66,15 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="raptop700rse" translatesAutoresizingMaskIntoConstraints="NO" id="c7Q-SO-2k6">
                                 <rect key="frame" x="50" y="400" width="250" height="134"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAB-Rx-2HL">
+                                <rect key="frame" x="50" y="550" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="toMainFromSports:" destination="nxN-lN-bfh" eventType="touchUpInside" id="aN4-YA-1DP"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toMainFromSports" id="7TA-db-q7h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -121,6 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="926" y="640"/>
         </scene>
         <!--Video Games View Controller-->
         <scene sceneID="WEt-W4-7kY">
@@ -140,6 +159,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnd-on-4HC">
+                                <rect key="frame" x="50" y="550" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="toMainFromVideoGames:" destination="DTu-fz-krM" eventType="touchUpInside" id="zpY-RA-zwi"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toMainFromVideoGames" id="A7m-uO-nGk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -167,17 +195,29 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyR-SM-qWE">
+                                <rect key="frame" x="50" y="550" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="toMainFromSchool:" destination="t3H-55-ldE" eventType="touchUpInside" id="kZT-mm-ZXo"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toMainFromSchool" id="1ei-md-9gb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pz2-fH-vGU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1933" y="781"/>
+            <point key="canvasLocation" x="1961" y="1129"/>
         </scene>
     </scenes>
     <resources>
         <image name="humanAugment copy" width="1497" height="978"/>
         <image name="raptop700rse" width="1024" height="683"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="A7m-uO-nGk"/>
+    </inferredMetricsTieBreakers>
 </document>

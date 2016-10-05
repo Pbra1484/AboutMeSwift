@@ -10,5 +10,9 @@ import UIKit
 
 class VideoGamesViewController : UIViewController
 {
+    @IBAction func toMainFromVideoGames(sender: UIButton)
+    {
+        performSegueWithIdentifier("toMainFromVideoGames", sender: sender)
+    }
     
 }

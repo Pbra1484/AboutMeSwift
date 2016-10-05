@@ -11,4 +11,8 @@ import UIKit
 class SportsViewController : UIViewController
 {
     
+    @IBAction func toMainFromSports(sender: UIButton)
+    {
+        performSegueWithIdentifier("toMainFromSports", sender: sender)
+    }
 }

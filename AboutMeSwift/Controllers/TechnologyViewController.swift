@@ -11,4 +11,8 @@ import UIKit
 class TechnologyViewController : UIViewController
 {
     
+    @IBAction func toMainFromTechnology(sender: UIButton)
+    {
+        performSegueWithIdentifier("toMainFromTechnology", sender: sender)
+    }
 }

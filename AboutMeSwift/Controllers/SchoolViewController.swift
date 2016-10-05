@@ -11,6 +11,10 @@ import UIKit
 class SchoolViewController : UIViewController
 {
     
+    @IBAction func toMainFromSchool(sender: UIButton)
+    {
+        performSegueWithIdentifier("toMainFromSchool", sender: sender)
+    }
     
     
 }
