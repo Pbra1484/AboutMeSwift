@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Technology View Controller-->
@@ -17,20 +18,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVo-Xl-wlZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVo-Xl-wlZ">
                                 <rect key="frame" x="50" y="50" width="250" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="M1B-E6-Nkr"/>
+                                    <constraint firstAttribute="width" constant="250" id="tZk-f3-y79"/>
+                                </constraints>
                                 <string key="text">I like most anything to do with technology and my goal is to push it as far as humanly possible then transcend humanity to push it farther. Specifically I like how computers are accurate and able to preform task significantly faster and more capable than people. I wait for day that the gap between humans and computers/other technology can be bridged directly, merging man and machine.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="M1B-E6-Nkr"/>
+                                        <exclude reference="tZk-f3-y79"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="M1B-E6-Nkr"/>
+                                        <include reference="tZk-f3-y79"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="humanAugment copy" translatesAutoresizingMaskIntoConstraints="NO" id="ktE-lR-eRP">
                                 <rect key="frame" x="50" y="400" width="250" height="133"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="133" id="7pT-TN-ndD"/>
+                                    <constraint firstAttribute="width" constant="250" id="cUH-ar-pAK"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7pT-TN-ndD"/>
+                                        <exclude reference="cUH-ar-pAK"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="7pT-TN-ndD"/>
+                                        <include reference="cUH-ar-pAK"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ID7-nl-X0j">
                                 <rect key="frame" x="50" y="550" width="46" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Back"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="550" width="46" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="toMainFromTechnology:" destination="xAi-1v-Kvi" eventType="touchUpInside" id="XPV-OS-Rvg"/>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="toMainFromTechnology" id="HVw-LM-jEO"/>
@@ -38,6 +74,34 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="ID7-nl-X0j" secondAttribute="leading" id="HjE-XO-Jp0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QVo-Xl-wlZ" secondAttribute="trailing" constant="55" id="MNQ-RQ-1h6"/>
+                            <constraint firstItem="hvU-Wt-1Ms" firstAttribute="top" secondItem="ID7-nl-X0j" secondAttribute="bottom" constant="20" id="dgC-HC-ymO"/>
+                            <constraint firstItem="QVo-Xl-wlZ" firstAttribute="top" secondItem="ZYF-kk-c6H" secondAttribute="bottom" constant="8" id="fpq-aq-9Iw"/>
+                            <constraint firstItem="hvU-Wt-1Ms" firstAttribute="top" secondItem="ktE-lR-eRP" secondAttribute="bottom" constant="97" id="i3f-lV-YFL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ktE-lR-eRP" secondAttribute="trailing" constant="55" id="zok-8L-ycq"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MNQ-RQ-1h6"/>
+                                <exclude reference="fpq-aq-9Iw"/>
+                                <exclude reference="zok-8L-ycq"/>
+                                <exclude reference="HjE-XO-Jp0"/>
+                                <exclude reference="dgC-HC-ymO"/>
+                                <exclude reference="i3f-lV-YFL"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="MNQ-RQ-1h6"/>
+                                <include reference="fpq-aq-9Iw"/>
+                                <include reference="zok-8L-ycq"/>
+                                <include reference="HjE-XO-Jp0"/>
+                                <include reference="dgC-HC-ymO"/>
+                                <include reference="i3f-lV-YFL"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQ9-at-vbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -58,18 +122,53 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ya-qf-gPM">
                                 <rect key="frame" x="50" y="50" width="250" height="194"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="194" id="FdA-2P-5XV"/>
+                                    <constraint firstAttribute="width" constant="250" id="NSL-VM-X2A"/>
+                                </constraints>
                                 <string key="text">I do sports like skiing and ATVing in there season. I also bike and a few other non-team sports. Some of them are mountain biking, hiking, sometimes climbing, and often this are done wile camping. My favorites remain as ATVing and skiing.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="FdA-2P-5XV"/>
+                                        <exclude reference="NSL-VM-X2A"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="FdA-2P-5XV"/>
+                                        <include reference="NSL-VM-X2A"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="raptop700rse" translatesAutoresizingMaskIntoConstraints="NO" id="c7Q-SO-2k6">
                                 <rect key="frame" x="50" y="400" width="250" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="134" id="o2G-Fp-fiz"/>
+                                    <constraint firstAttribute="width" constant="250" id="rba-Rl-bd3"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="o2G-Fp-fiz"/>
+                                        <exclude reference="rba-Rl-bd3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="o2G-Fp-fiz"/>
+                                        <include reference="rba-Rl-bd3"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAB-Rx-2HL">
                                 <rect key="frame" x="50" y="550" width="46" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Back"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="550" width="46" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="toMainFromSports:" destination="nxN-lN-bfh" eventType="touchUpInside" id="aN4-YA-1DP"/>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="toMainFromSports" id="7TA-db-q7h"/>
@@ -77,6 +176,34 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="RAB-Rx-2HL" secondAttribute="leading" id="3nK-yz-oKv"/>
+                            <constraint firstItem="ySO-Oi-ZRd" firstAttribute="top" secondItem="c7Q-SO-2k6" secondAttribute="bottom" constant="97" id="6Fo-tG-mF4"/>
+                            <constraint firstItem="ySO-Oi-ZRd" firstAttribute="top" secondItem="RAB-Rx-2HL" secondAttribute="bottom" constant="20" id="7Bh-4c-kOV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5ya-qf-gPM" secondAttribute="trailing" constant="55" id="HjR-WJ-iKL"/>
+                            <constraint firstItem="5ya-qf-gPM" firstAttribute="top" secondItem="l4g-Zw-1x6" secondAttribute="bottom" constant="8" id="WJK-pW-dd2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c7Q-SO-2k6" secondAttribute="trailing" constant="55" id="qm8-KZ-Cgj"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="HjR-WJ-iKL"/>
+                                <exclude reference="WJK-pW-dd2"/>
+                                <exclude reference="qm8-KZ-Cgj"/>
+                                <exclude reference="3nK-yz-oKv"/>
+                                <exclude reference="6Fo-tG-mF4"/>
+                                <exclude reference="7Bh-4c-kOV"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="HjR-WJ-iKL"/>
+                                <include reference="WJK-pW-dd2"/>
+                                <include reference="qm8-KZ-Cgj"/>
+                                <include reference="3nK-yz-oKv"/>
+                                <include reference="6Fo-tG-mF4"/>
+                                <include reference="7Bh-4c-kOV"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fEW-SL-IHn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -103,17 +230,12 @@
                                     <segue destination="xAi-1v-Kvi" kind="show" identifier="toTechnology" id="QUm-WF-eAH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKD-Z9-aZD">
-                                <rect key="frame" x="215" y="277" width="47" height="30"/>
-                                <state key="normal" title="School"/>
-                                <connections>
-                                    <action selector="toSchool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L72-1S-NrF"/>
-                                    <segue destination="t3H-55-ldE" kind="show" identifier="toSchool" id="dFr-Oa-JNV"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3T5-xT-TKc">
                                 <rect key="frame" x="117" y="325" width="92" height="30"/>
                                 <state key="normal" title="Video Games"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="117" y="325" width="92" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="toVideoGames:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Khj-5l-xiL"/>
                                     <segue destination="DTu-fz-krM" kind="show" identifier="toVideoGames" id="hAW-hY-uSR"/>
@@ -124,17 +246,74 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="141" y="107" width="118" height="22"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mf2-fM-iGe">
                                 <rect key="frame" x="215" y="325" width="46" height="30"/>
                                 <state key="normal" title="Sports"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="235" y="325" width="46" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="toSports:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kbz-pV-WzD"/>
                                     <segue destination="nxN-lN-bfh" kind="show" identifier="toSports" id="zvf-Gm-cEm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKD-Z9-aZD">
+                                <rect key="frame" x="215" y="277" width="47" height="30"/>
+                                <state key="normal" title="School"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="234" y="277" width="47" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="toSchool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L72-1S-NrF"/>
+                                    <segue destination="t3H-55-ldE" kind="show" identifier="toSchool" id="dFr-Oa-JNV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="sGp-cv-aoJ" secondAttribute="trailing" constant="121" id="2ng-Na-jGY"/>
+                            <constraint firstItem="eKD-Z9-aZD" firstAttribute="leading" secondItem="r3y-BQ-1b0" secondAttribute="trailing" constant="31" id="IFW-YJ-DDz"/>
+                            <constraint firstItem="mf2-fM-iGe" firstAttribute="leading" secondItem="r3y-BQ-1b0" secondAttribute="trailing" constant="32" id="Pj3-S4-TMf"/>
+                            <constraint firstItem="mf2-fM-iGe" firstAttribute="leading" secondItem="3T5-xT-TKc" secondAttribute="trailing" constant="26" id="UTE-5W-wfW"/>
+                            <constraint firstItem="mf2-fM-iGe" firstAttribute="top" secondItem="eKD-Z9-aZD" secondAttribute="bottom" constant="18" id="XwW-j2-R3b"/>
+                            <constraint firstItem="sGp-cv-aoJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="87" id="aRj-St-fA9"/>
+                            <constraint firstItem="mf2-fM-iGe" firstAttribute="top" secondItem="r3y-BQ-1b0" secondAttribute="bottom" constant="18" id="nwM-eT-z5a"/>
+                            <constraint firstItem="3T5-xT-TKc" firstAttribute="top" secondItem="r3y-BQ-1b0" secondAttribute="bottom" constant="18" id="pRw-Dt-20u"/>
+                            <constraint firstItem="r3y-BQ-1b0" firstAttribute="top" secondItem="sGp-cv-aoJ" secondAttribute="bottom" constant="148" id="rLJ-ln-lxZ"/>
+                            <constraint firstItem="r3y-BQ-1b0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="110" id="z8w-no-jjP"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2ng-Na-jGY"/>
+                                <exclude reference="aRj-St-fA9"/>
+                                <exclude reference="rLJ-ln-lxZ"/>
+                                <exclude reference="z8w-no-jjP"/>
+                                <exclude reference="pRw-Dt-20u"/>
+                                <exclude reference="IFW-YJ-DDz"/>
+                                <exclude reference="Pj3-S4-TMf"/>
+                                <exclude reference="UTE-5W-wfW"/>
+                                <exclude reference="XwW-j2-R3b"/>
+                                <exclude reference="nwM-eT-z5a"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="2ng-Na-jGY"/>
+                                <include reference="aRj-St-fA9"/>
+                                <include reference="rLJ-ln-lxZ"/>
+                                <include reference="z8w-no-jjP"/>
+                                <include reference="pRw-Dt-20u"/>
+                                <include reference="IFW-YJ-DDz"/>
+                                <include reference="Pj3-S4-TMf"/>
+                                <include reference="UTE-5W-wfW"/>
+                                <include reference="XwW-j2-R3b"/>
+                                <include reference="nwM-eT-z5a"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -155,14 +334,33 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I tend so play a lot of video games. The games I play are greatly varied. I won't list them due to the large number of them." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cy-p3-g7h">
                                 <rect key="frame" x="50" y="50" width="250" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="124" id="7KP-Na-BMe"/>
+                                    <constraint firstAttribute="width" constant="250" id="L1g-z6-MoL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7KP-Na-BMe"/>
+                                        <exclude reference="L1g-z6-MoL"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="7KP-Na-BMe"/>
+                                        <include reference="L1g-z6-MoL"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnd-on-4HC">
                                 <rect key="frame" x="50" y="550" width="46" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Back"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="550" width="46" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="toMainFromVideoGames:" destination="DTu-fz-krM" eventType="touchUpInside" id="zpY-RA-zwi"/>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="toMainFromVideoGames" id="A7m-uO-nGk"/>
@@ -170,6 +368,28 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="Jnd-on-4HC" secondAttribute="leading" id="Bfk-f7-88c"/>
+                            <constraint firstItem="TZs-Bp-pab" firstAttribute="top" secondItem="Jnd-on-4HC" secondAttribute="bottom" constant="20" id="Ftl-cu-VlI"/>
+                            <constraint firstItem="0cy-p3-g7h" firstAttribute="top" secondItem="EvE-7a-5xO" secondAttribute="bottom" constant="8" id="lRX-T4-UgK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0cy-p3-g7h" secondAttribute="trailing" constant="55" id="zjW-eS-vVz"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="lRX-T4-UgK"/>
+                                <exclude reference="zjW-eS-vVz"/>
+                                <exclude reference="Bfk-f7-88c"/>
+                                <exclude reference="Ftl-cu-VlI"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="lRX-T4-UgK"/>
+                                <include reference="zjW-eS-vVz"/>
+                                <include reference="Bfk-f7-88c"/>
+                                <include reference="Ftl-cu-VlI"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGU-i5-jVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -190,15 +410,34 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebH-bk-g8l">
                                 <rect key="frame" x="50" y="50" width="250" height="211"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="212" id="kE6-HQ-kn1"/>
+                                    <constraint firstAttribute="width" constant="250" id="w2x-6v-ldF"/>
+                                </constraints>
                                 <string key="text">I currently attend Corner Canyon High School. I am attempting to get my associates degree in high school. I am in the CTEC program. My goal is to create my own company that works in general technologies and products. The goal would be to produce advanced science and integrate it into everyday life.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="kE6-HQ-kn1"/>
+                                        <exclude reference="w2x-6v-ldF"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="kE6-HQ-kn1"/>
+                                        <include reference="w2x-6v-ldF"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyR-SM-qWE">
                                 <rect key="frame" x="50" y="550" width="46" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Back"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="550" width="46" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="toMainFromSchool:" destination="t3H-55-ldE" eventType="touchUpInside" id="kZT-mm-ZXo"/>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="toMainFromSchool" id="1ei-md-9gb"/>
@@ -206,6 +445,28 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ebH-bk-g8l" firstAttribute="top" secondItem="gid-Df-fMq" secondAttribute="bottom" constant="8" id="8G2-R1-1zz"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="jyR-SM-qWE" secondAttribute="leading" id="GIY-zc-aSb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ebH-bk-g8l" secondAttribute="trailing" constant="55" id="GkQ-9v-Qoh"/>
+                            <constraint firstItem="cYL-Aq-BrM" firstAttribute="top" secondItem="jyR-SM-qWE" secondAttribute="bottom" constant="20" id="IhZ-2v-lbe"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8G2-R1-1zz"/>
+                                <exclude reference="GkQ-9v-Qoh"/>
+                                <exclude reference="GIY-zc-aSb"/>
+                                <exclude reference="IhZ-2v-lbe"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="8G2-R1-1zz"/>
+                                <include reference="GkQ-9v-Qoh"/>
+                                <include reference="GIY-zc-aSb"/>
+                                <include reference="IhZ-2v-lbe"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pz2-fH-vGU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -218,6 +479,6 @@
         <image name="raptop700rse" width="1024" height="683"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="A7m-uO-nGk"/>
+        <segue reference="7TA-db-q7h"/>
     </inferredMetricsTieBreakers>
 </document>
